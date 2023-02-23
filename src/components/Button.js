@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Button = ({children,handeler}) => {
+const Button = ({children,handler}) => {
   return (
     <button
     className="bg-red-400 text-white px-3 py-2 rounded shadow"
-    onClick={handeler}
+    onClick={handler}
   >
     {children}
   </button>
