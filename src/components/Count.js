@@ -1,9 +1,3 @@
-import React from 'react'
-
-const Count = ({count}) => {
-  return (
-    <div className="text-2xl font-semibold">{count}</div>
-  )
+export default function Count({ count }) {
+    return <div class="text-2xl font-semibold">{count}</div>;
 }
-
-export default Count
