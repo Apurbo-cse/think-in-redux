@@ -1,67 +1,37 @@
-// select dom elements
-const counterEl = document.getElementById("counter");
-const incrementEl = document.getElementById("increment");
-const decrementEl = document.getElementById("decrement");
+const actions =[
+    {type :'increment', payload:1},
+    {type :'increment', payload:1},
+    {type :'increment', payload:1},
+    {type :'decrement', payload:1},
 
-// action identifiers
-const INCREMENT = "increment";
-const DECREMENT = "decrement";
+]
 
-// action creators
-const increment = (value) => {
-    return {
-        type: INCREMENT,
-        payload: value,
-    };
-};
-
-const decrement = (value) => {
-    return {
-        type: DECREMENT,
-        payload: value,
-    };
-};
-
-// initial state
 const initialState = {
-    value: 0,
-};
-
-// create reducer function
-function counterReducer(state = initialState, action) {
-    if (action.type === INCREMENT) {
-        return {
-            ...state,
-            value: state.value + action.payload,
-        };
-    } else if (action.type === DECREMENT) {
-        return {
-            ...state,
-            value: state.value - action.payload,
-        };
-    } else {
-        return state;
-    }
+    value : 0
 }
 
-// create store
-const store = Redux.createStore(counterReducer);
+const counterReducer = (state = 0, action) => {
+    if(action.type === 'increment'){
+        return {
+            ...state,
+            value: state.value + action.payload
+        }
+        
+    } else if(action.type === 'decrement'){
+        return {
+            ...state,
+            value: state.value - action.payload
+        }
+        
+    } else {
+        return state
 
-const render = () => {
-    const state = store.getState();
-    counterEl.innerText = state.value.toString();
-};
+    }
 
-// update UI initially
-render();
+}
 
-store.subscribe(render);
 
-// button click listeners
-incrementEl.addEventListener("click", () => {
-    store.dispatch(increment(3));
-});
 
-decrementEl.addEventListener("click", () => {
-    store.dispatch(decrement(2));
-});
+const finalResult = actions.reduce(counterReducer, initialState)
+
+console.log(finalResult)
