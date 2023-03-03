@@ -1,18 +1,18 @@
-import { DECREMENT, INCREMENET } from "./actionTypes";
+import { DDECREMENT, DINCREMENET } from "./actionTypes";
 
 const initialState = {
     value: 20,
 };
 
-const counterReducer = (state = initialState, action) => {
+const dynaminCounterReducer = (state = initialState, action) => {
     switch (action.type) {
-        case INCREMENET:
+        case DINCREMENET:
             return {
                 ...state,
-                value: state.value + ,
+                value: state.value + 1,
             };
 
-        case DECREMENT:
+        case DDECREMENT:
             return {
                 ...state,
                 value: state.value - 1,
@@ -23,4 +23,4 @@ const counterReducer = (state = initialState, action) => {
     }
 };
 
-export default counterReducer;
+export default dynaminCounterReducer;
