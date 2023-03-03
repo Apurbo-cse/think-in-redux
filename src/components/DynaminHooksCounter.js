@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { increment,decrement } from "../redux/counter/actions";
+import { increment,decrement } from "../redux/dynamicCounter/actions";
 
 function DynamicHooksCounter() {
     const count =useSelector((state) => state.value);
