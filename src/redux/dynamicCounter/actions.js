@@ -1,15 +1,15 @@
-import { DECREMENT, INCREMENET } from "./actionTypes";
+import { DDECREMENT, DINCREMENET } from "./actionTypes";
 
 export const increment = (value) => {
     return {
-        type: INCREMENET,
+        type: DINCREMENET,
         payload: value,
     };
 };
 
 export const decrement = (value) => {
     return {
-        type: DECREMENT,
+        type: DDECREMENT,
         payload: value,
     };
 };
