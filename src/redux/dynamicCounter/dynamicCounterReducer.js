@@ -1,7 +1,7 @@
 import { DDECREMENT, DINCREMENET } from "./actionTypes";
 
 const initialState = {
-    value: 20,
+    value: 0,
 };
 
 const dynaminCounterReducer = (state = initialState, action) => {
@@ -9,13 +9,14 @@ const dynaminCounterReducer = (state = initialState, action) => {
         case DINCREMENET:
             return {
                 ...state,
-                value: state.value + 1,
+                value: state.value + action.payload.value,
             };
 
         case DDECREMENT:
             return {
                 ...state,
-                value: state.value - 1,
+                value: state.value - action.payload.value,
+                
             };
 
         default:
