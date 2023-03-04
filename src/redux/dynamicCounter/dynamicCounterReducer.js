@@ -9,13 +9,13 @@ const dynaminCounterReducer = (state = initialState, action) => {
         case DINCREMENET:
             return {
                 ...state,
-                value: state.value + action.payload.value,
+                value: state.value + action.payload,
             };
 
         case DDECREMENT:
             return {
                 ...state,
-                value: state.value - action.payload.value,
+                value: state.value - action.payload,
                 
             };
 
