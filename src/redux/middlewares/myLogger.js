@@ -1,3 +1,4 @@
+import rootReducer from "../rootReducer"
 
 //create our first middleware
 const myLogger = (store) => (next) => (action) => {
