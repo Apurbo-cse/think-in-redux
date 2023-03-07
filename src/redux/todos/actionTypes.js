@@ -1,4 +1,4 @@
-import { ADDED, COLORSSLECTED, DELETED, TOGGLED } from "./actions";
+import { ADDED, CLEARCOMPLETED, COLORSSLECTED, COMPLETED, DELETED, TOGGLED } from "./actions";
 
 export const added = (todoText) => {
   return {
@@ -29,5 +29,17 @@ export const deleted = (todoId) => {
     return {
         type: DELETED,
         payload: todoId,
+    }
+}
+
+export const completed = () => {
+    return {
+        type: COMPLETED,
+    }
+}
+
+export const clearCompleted = () => {
+    return {
+        type: CLEARCOMPLETED,
     }
 }
