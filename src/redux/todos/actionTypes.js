@@ -1,4 +1,4 @@
-import { ADDED, COLORSSLECTED, TOGGLED } from "./actions";
+import { ADDED, COLORSSLECTED, DELETED, TOGGLED } from "./actions";
 
 export const added = (todoText) => {
   return {
@@ -23,3 +23,11 @@ export const colorSelected = (todoId, color) => {
     },
   };
 };
+
+
+export const deleted = (todoId) => {
+    return {
+        type: DELETED,
+        payload: todoId,
+    }
+}
