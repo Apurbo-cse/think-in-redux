@@ -1,2 +1,2 @@
-export const STATUSCHANGED ="todos/statuschanged";
-export const COLORCHANGED ="todos/colorchanged";
+export const STATUS_CHANGED ="todos/statuschanged";
+export const COLOR_CHANGED ="todos/colorchanged";
