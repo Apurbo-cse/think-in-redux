@@ -1,6 +1,5 @@
-const initialSate = {
-    status:'All',
-    color:[]
-}
-
-export default initialSate
+const initialState = {
+    status: "All",
+    colors: [],
+};
+export default initialState;
