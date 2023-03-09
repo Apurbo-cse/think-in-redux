@@ -3,7 +3,7 @@ import React from "react";
 const ProductContainer = () => {
   return (
     <>
-      {/* <!-- products container --> */}
+    
       <div class="productContainer" id="lws-productContainer">
         {/* <!-- product item --> */}
         <div class="lws-productCard">
@@ -51,7 +51,6 @@ const ProductContainer = () => {
         </div>
         {/* <!-- product item ends --> */}
       </div>
-      {/* <!-- products container ends --> */}
     </>
   );
 };
