@@ -1,28 +1,28 @@
 const fetch = require("node-fetch");
 
 const delayActionMiddleware = (store) => (next) => (action) => {
-    if (action.type === "todos/todoAdded") {
-        console.log("I am delaying you!");
+  if (action.type === "todos/todoAdded") {
+    console.log("I am delaying you!");
 
-        setTimeout(() => {
-            next(action);
-        }, 2000);
+    setTimeout(() => {
+      next(action);
+    }, 2000);
 
-        return;
-    }
+    return;
+  }
 
-    return next(action);
+  return next(action);
 };
 
-const fetchTodosMiddleware = (store) => (next) => async (action) => {
-    if (action.type === "todos/fetchTodos") {
-       
-    }
+const fetchAsyncMiddleware = (store) => (next) => async (action) => {
+  if (typeof action === "function") {
+    return action(store.dispatch, store.getState);
+  }
 
-    return next(action);
+  return next(action);
 };
 
 module.exports = {
-    delayActionMiddleware,
-    fetchTodosMiddleware,
+  delayActionMiddleware,
+  fetchAsyncMiddleware,
 };
