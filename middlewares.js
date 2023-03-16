@@ -10,3 +10,8 @@ const  delayActionMiddleware = (store) => (next) => (action) => {
 
     return next(action);
 }
+
+
+module.exports = {
+    delayActionMiddleware
+};
