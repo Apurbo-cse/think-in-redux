@@ -1,2 +1,2 @@
-export const ADDED = "todos/added";
+export const ADDED = "added";
 
