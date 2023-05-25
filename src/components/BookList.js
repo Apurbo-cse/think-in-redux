@@ -1,7 +1,14 @@
 import React from "react";
 import { BookCard } from "./BookCard";
+import { useDispatch } from "react-redux";
 
 const BookList = () => {
+    const books = useSelector((state) => state.books);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchTodos)
+      }, [dispatch])
   return (
     <>
       <div className="flex items-center justify-between mb-12">
